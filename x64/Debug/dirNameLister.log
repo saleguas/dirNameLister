@@ -1,6 +1,2 @@
-﻿  stdafx.cpp
-  dirNameLister.cpp
-  sourceMethods.cpp
-  Generating Code...
-     Creating library C:\Users\drale\Documents\GitHub\dirNameLister\x64\Debug\dirNameLister.lib and object C:\Users\drale\Documents\GitHub\dirNameLister\x64\Debug\dirNameLister.exp
+﻿  sourceMethods.cpp
   dirNameLister.vcxproj -> C:\Users\drale\Documents\GitHub\dirNameLister\x64\Debug\dirNameLister.exe

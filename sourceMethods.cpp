@@ -20,17 +20,34 @@ void printDir(string path)
 		cout << entry.path() << endl;
 }
 
-vector<string> generateSource(string path, bool onlyName)
+vector<string> generateSource(string path, bool onlyName, bool keepExt)
 {
 	vector<string> retn;
 	retn.push_back("");
 	for (const auto entry : fs::directory_iterator(path))
-		if(!onlyName)
-			retn.push_back(entry.path().filename().string());
+		if (!onlyName)
+		{
+			string currentPath = entry.path().filename().string();
+			if (!keepExt)
+				retn.push_back(currentPath);
+			else
+			{
+				size_t lastindex = currentPath.find_last_of(".");
+				retn.push_back(currentPath.substr(0, lastindex));
+			}
+		}
 		else {
 			retn.push_back(absolute(entry.path()).string());
 		}
 	return retn;
+}
+
+void addExt(vector<string> &source, string path)
+{
+	for (const auto entry : fs::directory_iterator(path))
+	{
+
+	}
 }
 void createTXT(vector<string> source, string name)
 {
