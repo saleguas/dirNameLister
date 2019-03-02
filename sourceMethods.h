@@ -6,4 +6,5 @@
 #include <vector>
 
 void printDir(std::string path);
-std::vector<std::vector<std::string>> generateSource(std::string path, bool onlyName);
+std::vector<std::string> generateSource(std::string path, bool onlyName);
+void createTXT(std::vector<std::string> source, std::string name);
